@@ -13,7 +13,6 @@ desenvolvedores = [
      'habilidades': ['Python', 'Flask']
      }
 ]
-##
 
 @app.route('/dev/<int:id>', methods=['GET', 'PUT', 'DELETE'])
 def desenvolvedor(id):
@@ -25,7 +24,7 @@ def desenvolvedor(id):
         response = {'status': 'erro', 'mensagem': mensagem}
         return jsonify(response)
     except Exception:
-        mensagem = 'Erro desconhecidio'
+        mensagem = 'Erro desconhecido'
         response = {'status': 'erro', 'mensagem': mensagem}
         return jsonify(response)
 
